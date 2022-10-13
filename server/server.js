@@ -22,8 +22,6 @@ router.use(function timeLog(req, res, next) {
   next();
 });
 
-//models import
-
 // routes
 app.use("/api/projects", projectsRoutes);
 app.use("/api/users", usersRoutes);

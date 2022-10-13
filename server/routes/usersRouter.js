@@ -1,7 +1,7 @@
 // dependencies
 const express = require("express");
 const router = express.Router();
-const Projects = require("../models/usersModels");
+const Projects = require("../models/userModels");
 
 // GET all projects
 router.get("/", (req, res, next) => {
