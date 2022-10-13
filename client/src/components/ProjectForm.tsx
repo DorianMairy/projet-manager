@@ -93,6 +93,7 @@ const ProjectForm = () => {
             value={projectState}
             />
             <button>Add Project</button>
+            {error && <div className='error'>{error}</div>}
         </form>
     )
 }

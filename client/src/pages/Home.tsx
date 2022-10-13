@@ -4,8 +4,8 @@ import { useEffect, useState } from "react"
 import "../scss/index.scss";
 
 // components
-
 import ProjectDetails from "../components/ProjectDetails"
+import ProjectForm from "../components/ProjectForm";
 
 const Home = () => {
 
@@ -31,6 +31,7 @@ const Home = () => {
                     <ProjectDetails key={project._id} project={project} children={undefined} />
                 ))}
             </div>
+            <ProjectForm />
         </div>
     )
 }

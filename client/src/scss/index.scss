@@ -3,8 +3,10 @@
 @import "navbar";
 @import "projects";
 @import "input";
+@import "button";
+@import "error";
 body {
-  background-color: $foncer;
+  background-color: #839aa8;
 }
 .pages {
   max-width: 1400px;
