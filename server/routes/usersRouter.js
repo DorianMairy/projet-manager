@@ -1,41 +1,27 @@
 // dependencies
 const express = require("express");
 const router = express.Router();
-const Projects = require("../models/userModels");
+const {
+  createUser,
+  getUsers,
+  getUser,
+  deleteUser,
+  updateUser,
+} = require("../controllers/UserController");
 
 // GET all projects
-router.get("/", (req, res, next) => {
-  res.json({ message: "GET all projects" });
-});
+router.get("/", getUsers);
 
 // GET a single project
-router.get("/:id", (req, res) => {
-  res.json({ message: "GET a single project" });
-});
+router.get("/:id", getUser);
 
 // POST a new project
-router.post("/", async (req, res) => {
-  const { name, email, password } = req.body;
-  try {
-    const project = await Projects.create({
-      name,
-      email,
-      password,
-    });
-    res.status(200).json(project);
-  } catch (error) {
-    res.status(400).json({ error: error.message });
-  }
-});
+router.post("/", createUser);
 
 // DELETE a new project
-router.delete("/:id", (req, res) => {
-  res.json({ message: "DELETE a project" });
-});
+router.delete("/:id", deleteUser);
 
 // UPDATE a new project
-router.patch("/:id", (req, res) => {
-  res.json({ message: "UPDATE a project" });
-});
+router.patch("/:id", updateUser);
 
 module.exports = router;

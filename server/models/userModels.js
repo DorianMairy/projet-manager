@@ -17,7 +17,7 @@ const userSchema = new Schema({
   },
   role: {
     type: Number,
-    required: true,
+    required: false,
   },
   date: {
     type: Date,
@@ -25,4 +25,4 @@ const userSchema = new Schema({
   },
 });
 
-module.exports = User = mongoose.model("Users", userSchema);
+module.exports = mongoose.model("Users", userSchema);
