@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 
 const Home = () => {
 
-    const [projects, setProjects] = useState(null);
+    const [projects, setProjects] = useState([]);
 
     useEffect(() => {
         const fetchProjects = async  () => {
