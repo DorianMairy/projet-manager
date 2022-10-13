@@ -7,7 +7,8 @@ const router = express.Router();
 require("dotenv").config();
 
 //routes dependencies
-const projectsRoutes = require("./routes/projects_router");
+const projectsRoutes = require("./routes/projectsRouter");
+const usersRoutes = require("./routes/usersRouter");
 
 // server configuration
 const app = express();
@@ -25,6 +26,7 @@ router.use(function timeLog(req, res, next) {
 
 // routes
 app.use("/api/projects", projectsRoutes);
+app.use("/api/users", usersRoutes);
 
 // Database configuration
 const uri = process.env.ATLAS_URI;

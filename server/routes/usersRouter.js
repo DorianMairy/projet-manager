@@ -1,7 +1,7 @@
 // dependencies
 const express = require("express");
-
 const router = express.Router();
+const Projects = require("../models/usersModels");
 
 // GET all projects
 router.get("/", (req, res, next) => {
@@ -14,8 +14,18 @@ router.get("/:id", (req, res) => {
 });
 
 // POST a new project
-router.post("/", (req, res) => {
-  res.json({ message: "POST a new project" });
+router.post("/", async (req, res) => {
+  const { name, email, password } = req.body;
+  try {
+    const project = await Projects.create({
+      name,
+      email,
+      password,
+    });
+    res.status(200).json(project);
+  } catch (error) {
+    res.status(400).json({ error: error.message });
+  }
 });
 
 // DELETE a new project
