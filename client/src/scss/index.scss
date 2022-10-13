@@ -1,0 +1,16 @@
+@import "reset";
+@import "colors";
+@import "navbar";
+@import "projects";
+@import "input";
+body {
+  background-color: $foncer;
+}
+.pages {
+  max-width: 1400px;
+  padding: 20px;
+  margin: 0 auto;
+}
+.app {
+  background-color: aqua;
+}

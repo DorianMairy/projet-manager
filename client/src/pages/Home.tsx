@@ -1,4 +1,11 @@
+// dependencies
 import { useEffect, useState } from "react"
+
+import "../scss/index.scss";
+
+// components
+
+import ProjectDetails from "../components/ProjectDetails"
 
 const Home = () => {
 
@@ -6,7 +13,7 @@ const Home = () => {
 
     useEffect(() => {
         const fetchProjects = async  () => {
-            const response = await fetch('http://localhost:5000/api/projects')
+            const response = await fetch('/api/projects')
             const json = await response.json()
 
             if (response.ok) {
@@ -21,7 +28,7 @@ const Home = () => {
         <div className="home">
             <div className="projects">
                 {projects && projects.map((project: any) => (
-                    <p key={project._id}>{project.title}</p>
+                    <ProjectDetails key={project._id} project={project} children={undefined} />
                 ))}
             </div>
         </div>
