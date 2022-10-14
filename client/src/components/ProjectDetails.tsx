@@ -16,6 +16,7 @@ const ProjectDetails = ({ project }: Props) => {
         <p><strong>Project Start Date : </strong>{project.projectStartDate}</p>
         <p><strong>Project End Date : </strong>{project.projectEndDate}</p>
         <p><strong>Project Statuts : </strong>{project.projectState}</p>
+        <p>{project.projectImg}</p>
         </div>
     )
 }

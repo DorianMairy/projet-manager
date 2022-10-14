@@ -1,6 +1,6 @@
 // dependencies
 import { Link } from 'react-router-dom' 
-import "../scss/navbar.scss";
+import "../scss/index.scss";
 
 const Navbar = () => {
 

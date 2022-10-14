@@ -5,14 +5,12 @@
 @import "input";
 @import "button";
 @import "error";
+
 body {
-  background-color: #839aa8;
+  background-color: $silver;
 }
 .pages {
   max-width: 1400px;
   padding: 20px;
   margin: 0 auto;
-}
-.app {
-  background-color: aqua;
 }

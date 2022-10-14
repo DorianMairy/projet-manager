@@ -10,12 +10,13 @@ const ProjectForm = () => {
     const [projectStartDate, setProjectStartDate] = useState("")
     const [projectEndDate, setProjectEndDate] = useState("")
     const [projectState, setProjectState] = useState("")
+    const [projectImg, setProjectImg] = useState("")
     const [error, setError] = useState(null)
 
     const handleSubmit = async (e: { preventDefault: () => void; }) => {
         e.preventDefault();
 
-        const project = {title, description, repo, clientFirstName, clientLastName, clientNumber, projectStartDate, projectEndDate, projectState}
+        const project = {title, description, repo, clientFirstName, clientLastName, clientNumber, projectStartDate, projectEndDate, projectState, projectImg}
 
         const response = await fetch('/api/projects', {
             method: 'POST',
@@ -39,6 +40,7 @@ const ProjectForm = () => {
             setProjectStartDate('')
             setProjectEndDate('')
             setProjectState('')
+            setProjectImg('')
             setError(null)
             console.log('new project added', json)
         }
@@ -91,6 +93,12 @@ const ProjectForm = () => {
             <input type="text" 
             onChange={(e) => setProjectState(e.target.value)}
             value={projectState}
+            />
+            <label>Project Image :</label>
+            <input type="file"
+            accept='image'
+            onChange={(e) => setProjectImg(e.target.value)}
+            value={projectImg}
             />
             <button>Add Project</button>
             {error && <div className='error'>{error}</div>}
