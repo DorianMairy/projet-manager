@@ -5,6 +5,14 @@ type Props = {
     project: any;
 }
 const ProjectDetails = ({ project }: Props) => {
+
+    const handleClick = async () => {
+        const response = await fetch('/api/projects/' + project._id, {
+            method: 'DELETE',
+        })
+        const json = await response.json()
+    }
+
     return (
         <div className="project-details">
         <h4>{project.title}</h4>
@@ -17,6 +25,7 @@ const ProjectDetails = ({ project }: Props) => {
         <p><strong>Project End Date : </strong>{project.projectEndDate}</p>
         <p><strong>Project Statuts : </strong>{project.projectState}</p>
         <p>{project.projectImg}</p>
+        <span onClick={handleClick}>Delete</span>
         </div>
     )
 }

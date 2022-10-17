@@ -4,7 +4,7 @@ Projet Manager créer avec le MERN Stack ( MongoDB, ExpressJS, React, NodeJS).
 
 ## Roadmap
 
-Login 
+Login
 
 Register
 
@@ -22,13 +22,6 @@ Create New Projet
 Update Projet
 
 Delete Projet
-## Primary colors
-
-| Color             | Hex                                                                |
-| ----------------- | ------------------------------------------------------------------ |
-| Dark Blue | ![#222F3E](https://via.placeholder.com/10/222F3E?text=+) #222F3E |
-| Light Blue | ![#6F95C1](https://via.placeholder.com/10/6F95C1?text=+) #6F95C1 |
-| White | ![#fffff](https://via.placeholder.com/10/fffffa?text=+) #fffff |
 
 ## Authors
 
@@ -36,17 +29,18 @@ Delete Projet
 
 ## Tech Stack
 
-**Front-end:** React, Boostrap, Saas
+**Front-end:** React, Saas
 
 **Back-end:** NodeJS, ExpressJS, MongoDB
 
+**App-Userd** Jira, Synk
 
 ## Deployment
 
-To deploy this project run
+To deploy this project
 
 On my Ubuntu Server
+
 ## Used By
 
 This project is used by ME !!
-
