@@ -29,7 +29,7 @@ const ProjectDetails = ({ project }: Props) => {
         <p><strong>Project End Date : </strong>{project.projectEndDate}</p>
         <p><strong>Project Statuts : </strong>{project.projectState}</p>
         <p>{project.projectImg}</p>
-        <span onClick={handleClick}>Delete</span>
+        <span onClick={handleClick}><i className="fa fa-trash fa-2x"></i></span>
         </div>
     )
 }
