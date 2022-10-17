@@ -38,6 +38,42 @@ const createProject = async (req, res) => {
     projectEndDate,
     projectState,
   } = req.body;
+
+  let emptyFields = [];
+
+  if (!title) {
+    emptyFields.push("title");
+  }
+  if (!description) {
+    emptyFields.push("description");
+  }
+  if (!repo) {
+    emptyFields.push("repo");
+  }
+  if (!clientFirstName) {
+    emptyFields.push("clientFirstName");
+  }
+  if (!clientLastName) {
+    emptyFields.push("clientLastName");
+  }
+  if (!clientNumber) {
+    emptyFields.push("clientNumber");
+  }
+  if (!projectStartDate) {
+    emptyFields.push("projectStartDate");
+  }
+  if (!projectEndDate) {
+    emptyFields.push("projectEndDate");
+  }
+  if (!projectState) {
+    emptyFields.push("projectState");
+  }
+  if (emptyFields.length > 0) {
+    return res
+      .status(400)
+      .json({ error: "Please fill in all the fields", emptyFields });
+  }
+
   // add doc to db
   try {
     const project = await Projects.create({

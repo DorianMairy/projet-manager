@@ -11,6 +11,10 @@ const ProjectDetails = ({ project }: Props) => {
             method: 'DELETE',
         })
         const json = await response.json()
+
+        if(response.ok) {
+            console.log('Project deleted successfully', json)
+        }
     }
 
     return (
