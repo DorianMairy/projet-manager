@@ -11,13 +11,13 @@ const Navbar = () => {
                     <h1>Project Manager</h1>
                 </Link>
                 <Link to="/projects">
-                    <h5>Projects</h5>
+                    Projects
                 </Link>
-                <Link to="/register">
-                    <h5>Register</h5>
+                <Link to="/signup">
+                    Sign up
                 </Link>
                 <Link to="/login">
-                    <h5>Login</h5>
+                    Log in
                 </Link>
             </div>
         </header>
