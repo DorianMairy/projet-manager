@@ -1,0 +1,21 @@
+// import
+@import "reset";
+@import "colors";
+@import "navbar";
+@import "projects";
+@import "input";
+@import "button";
+@import "error";
+@import "form";
+@import "icon";
+
+// base
+body {
+  background-color: #eaeaea;
+}
+.pages {
+  max-width: 1400px;
+  padding: 20px;
+  margin: 0 auto;
+  background-color: #eaeaea;
+}

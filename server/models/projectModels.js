@@ -7,36 +7,45 @@ const Schema = mongoose.Schema;
 const projectSchema = new Schema(
   {
     title: {
-      type: string,
+      type: String,
+      required: true,
+    },
+    description: {
+      type: String,
       required: true,
     },
     repo: {
-      type: string,
+      type: String,
       required: true,
     },
     clientFirstName: {
-      type: string,
+      type: String,
       required: false,
     },
     clientLastName: {
-      type: string,
+      type: String,
       required: false,
     },
     clientNumber: {
-      type: number,
+      type: Number,
       required: false,
     },
     projectStartDate: {
-      type: string,
+      type: String,
       required: false,
     },
     projectEndDate: {
-      type: string,
+      type: String,
       required: false,
     },
     projectState: {
-      type: string,
+      type: String,
       required: true,
+    },
+    img: {
+      data: Buffer,
+      contentType: String,
+      required: false,
     },
   },
   { timestamps: true }
